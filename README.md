@@ -18,8 +18,8 @@ _**Note**: Latinize requires Nim 1.4.0 or higher._
 import latinize
 
 const
-    text: string = "ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů"
-    result: string = translate(s = text)
+  text: string = "ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů"
+  result: string = translate(s = text)
 
 assert result == "ExAmPlE aeiouycdenrstzu"
 ```
