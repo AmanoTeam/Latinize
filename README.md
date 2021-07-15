@@ -10,7 +10,7 @@ Install using `nimble`:
 nimble install --accept 'git://github.com/AmanoTeam/Latinize.git'
 ```
 
-_**Note**: Latinize requires Nim 1.2.0 or higher._
+_**Note**: Latinize requires Nim 1.4.0 or higher._
 
 #### Library usage
 
@@ -26,7 +26,7 @@ assert result == "ExAmPlE aeiouycdenrstzu"
 
 #### CLI tool usage
 
-```bash
+```
 $ latinize --help
 usage: latinize [-h] [-v] -t TEXT
 
@@ -49,7 +49,7 @@ action is to read from standard input.
 
 #### Downloads
 
-You can download prebuilt static binaries of the CLI tool for Android and Linux from the [GitHub releases](https://github.com/AmanoTeam/Latinize/releases).
+You can download prebuilt static binaries of the CLI tool for Android and Linux from the [GitHub releases](https://github.com/AmanoTeam/Latinize/releases) page.
 
 #### Contributing
 
