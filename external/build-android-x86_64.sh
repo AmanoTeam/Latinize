@@ -28,11 +28,6 @@ nim compile \
 	--os:android \
 	--cpu:amd64 \
 	--define:release \
-	--define:ssl \
-	--define:nimDisableCertificateValidation \
-	--dynlibOverride:libssl \
-	--dynlibOverride:libcrypto \
-	--dynlibOverride:libpcre \
 	--opt:size \
 	--passC:-flto=full \
 	--passC:-fPIC \
@@ -44,12 +39,6 @@ nim compile \
 	--passL:-fwhole-program-vtables \
 	--passL:-ffunction-sections \
 	--passL:-data-sections \
-	--passL:-static \
-	--passL:"${pcrePath}" \
-	--passL:"${libcryptoPath}" \
-	--passL:"${libsslPath}" \
-	--gcc.exe:"${CC}" \
-	--gcc.linkerexe:"${CC}" \
 	'./src/latinizepkg/main.nim'
 
 jq -r '.compile[][1]' "${OUT_JSON}" | awk "{sub(\"clang\",\"${CC}\")} 1" > build.sh
